@@ -10,8 +10,13 @@ class TuftsStandard extends React.Component {
   render(){
     return (
       <>
-        <Header />
-        <Navigation />
+        <Header 
+          setMenuState={this.props.setMenuState}
+          menuState={this.props.menuState}
+        />
+        <Navigation 
+          menuState={this.props.menuState}
+        />
         <TuftsStandardBanner />
         <TuftsStandardMain />
         <Footer />

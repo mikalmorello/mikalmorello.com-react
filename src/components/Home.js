@@ -18,7 +18,9 @@ class Home extends React.Component {
           setMenuState={this.props.setMenuState}
           menuState={this.props.menuState}
         />
-        <Navigation />
+        <Navigation 
+          menuState={this.props.menuState}
+        />
         <HomeBanner />
         <HomeMain />
         <Footer />

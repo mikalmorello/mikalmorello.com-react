@@ -23,16 +23,16 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      menuState: 'false'
+      menuState: false
     }
     this.setMenuState = this.setMenuState.bind(this);
   } 
   
   
   setMenuState(activeState){
-    this.setState({
-      menuState: activeState
-    })
+    this.setState(prevState => ({
+      menuState: !prevState.menuState
+    }))
   }
   
   render(){
@@ -53,6 +53,8 @@ class App extends React.Component {
             render={(props) => (
               <Projects
                 {...props} 
+                setMenuState={this.setMenuState} 
+                menuState={this.state.menuState} 
               />
             )} 
           />
@@ -61,6 +63,8 @@ class App extends React.Component {
             render={(props) => (
               <Contact
                 {...props} 
+                setMenuState={this.setMenuState} 
+                menuState={this.state.menuState} 
               />
             )} 
           />
@@ -69,6 +73,8 @@ class App extends React.Component {
             render={(props) => (
               <TuftsMagazine
                 {...props} 
+                setMenuState={this.setMenuState} 
+                menuState={this.state.menuState}  
               />
             )} 
           />
@@ -77,6 +83,8 @@ class App extends React.Component {
             render={(props) => (
               <TuftsStandard
                 {...props} 
+                setMenuState={this.setMenuState} 
+                menuState={this.state.menuState} 
               />
             )} 
           />
@@ -85,6 +93,8 @@ class App extends React.Component {
             render={(props) => (
               <BostonCollege
                 {...props} 
+                setMenuState={this.setMenuState} 
+                menuState={this.state.menuState} 
               />
             )} 
           />

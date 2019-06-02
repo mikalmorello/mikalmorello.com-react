@@ -11,8 +11,13 @@ class Projects extends React.Component {
     
     return (
       <>
-        <Header />
-        <Navigation />
+        <Header 
+          setMenuState={this.props.setMenuState}
+          menuState={this.props.menuState}
+        />
+        <Navigation 
+          menuState={this.props.menuState}
+        />
         <ProjectsBanner />
         <ProjectsMain />
         <Footer />

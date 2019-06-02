@@ -17,8 +17,8 @@ class TuftsStandardMain extends React.Component {
             </picture>
           </div>
         </section>
-        <section classNameName="section section--text-block project__section fadein">
-          <div classNameName="section__container">
+        <section className="section section--text-block project__section fadein">
+          <div className="section__container">
             <div className="text-block text-block--intro text-block--title">
               <div className="text-block__side">
                 <h2 className="text-block__verticle-title">Rapid Recreation</h2>
