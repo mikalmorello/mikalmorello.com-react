@@ -19,7 +19,7 @@ class Header extends React.Component {
   }
   
   setHeaderColor(menuState, headerStyle){
-    if (menuState === true || headerStyle == 'light') {
+    if (menuState === true || headerStyle === 'light') {
       return 'header--menu-light';
     } else {
       return '';
@@ -38,7 +38,7 @@ class Header extends React.Component {
             </Link>
           </div>
           <div className="header__actions">
-            <button id="headerMenuButton" className="header__menu-button" className={`header__menu-button ${this.checkMenuState(this.props.menuState)}`} onClick={(e)=>this.props.setMenuState()}>
+            <button id="headerMenuButton" className={`header__menu-button ${this.checkMenuState(this.props.menuState)}`} onClick={(e)=>this.props.setMenuState()}>
               <SvgMenu />
             </button>
           </div>

@@ -8,7 +8,9 @@ import Footer from './Footer'
 class Home extends React.Component {
   
   render(){
-      
+    
+      document.body.classList.add('body--home');
+    
     return (
       <>
         <Header 

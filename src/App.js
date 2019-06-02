@@ -7,17 +7,8 @@ import TuftsStandard from './components/TuftsStandard'
 import BostonCollege from './components/BostonCollege'
 import { 
   BrowserRouter as Router, 
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
-
-const Links = () => (
-  <nav>
-    <Link exact activeClassName="active" to="/">Home</Link>
-    <Link activeClassName="active" to='/projects'>Projects</Link>
-    <Link activeClassName="active" to='/contact'>Contact</Link>
-  </nav>
-)
 
 class App extends React.Component {
   constructor(props) {
