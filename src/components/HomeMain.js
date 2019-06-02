@@ -1,4 +1,5 @@
 import React from 'react';
+import SvgCanon from './SvgCanon';
 
 class HomeMain extends React.Component {
   
@@ -79,7 +80,7 @@ class HomeMain extends React.Component {
               </h2>
               <div className="contact-card__icon">
                 <span className="svgstore svgstore--cannon">
-                  ~~ REPLACE SVG ~~
+                  <SvgCanon />
                 </span>
               </div>
             </div>

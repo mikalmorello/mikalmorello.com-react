@@ -1,4 +1,5 @@
 import React from 'react';
+import SvgLogo from './SvgLogo';
 
 class Footer extends React.Component {
   
@@ -9,7 +10,7 @@ class Footer extends React.Component {
           <div className="footer__brand">
             <a className="footer__logo" href="/">
               <span className="svgstore svgstore--logo">
-                    ~~INSERT LOGO HERE~~
+                <SvgLogo />
               </span>
             </a>
           </div>

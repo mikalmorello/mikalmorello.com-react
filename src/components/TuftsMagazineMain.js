@@ -184,7 +184,7 @@ class TuftsMagazineMain extends React.Component {
                 </div>
                 <div className="media-cards__introduction-media">
                   <div className="media-cards__media-element">
-                    <img src="/assets/images/tufts-magazine-screenshot-1.jpg" alt="Type over image banner" />
+                    <img src="/assets/images/tufts-magazine-screenshot-1.jpg" alt="Type over banner" />
                   </div>
                 </div>
               </div>
@@ -193,7 +193,7 @@ class TuftsMagazineMain extends React.Component {
                   <img src="/assets/images/tufts-magazine-screenshot-6.jpg" alt="Typographic banner" />
                 </div>
                 <div className="media-cards__media-element media-cards__media-element--wrap">
-                  <img src="/assets/images/tufts-magazine-screenshot-3.jpg" alt="Type and text over image banner" />
+                  <img src="/assets/images/tufts-magazine-screenshot-3.jpg" alt="Type and text over banner" />
                 </div>
                 <div className="media-cards__media-element media-cards__media-element--wrap"> 
                   <img src="/assets/images/tufts-magazine-screenshot-4.jpg" alt="Video Banner" />
