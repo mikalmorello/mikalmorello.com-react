@@ -8,9 +8,16 @@ import Footer from './Footer'
 class Home extends React.Component {
   
   render(){
+      
+    console.log(this.props.menuState);
+
+    
     return (
       <>
-        <Header />
+        <Header 
+          setMenuState={this.props.setMenuState}
+          menuState={this.props.menuState}
+        />
         <Navigation />
         <HomeBanner />
         <HomeMain />

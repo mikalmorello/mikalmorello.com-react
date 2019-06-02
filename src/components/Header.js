@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 class Header extends React.Component {
-  
+
   render(){
     return (
       <header id="header" className="header">
@@ -19,7 +19,7 @@ class Header extends React.Component {
             </Link>
           </div>
           <div className="header__actions">
-            <button id="headerMenuButton" className="header__menu-button">
+            <button id="headerMenuButton" className="header__menu-button" onClick={(e)=>this.props.setMenuState('true')}>
               <SvgMenu />
             </button>
           </div>

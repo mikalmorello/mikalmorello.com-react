@@ -20,17 +20,74 @@ const Links = () => (
 )
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      menuState: 'false'
+    }
+    this.setMenuState = this.setMenuState.bind(this);
+  } 
+  
+  
+  setMenuState(activeState){
+    this.setState({
+      menuState: activeState
+    })
+  }
   
   render(){
-    
     return (
       <Router>
-          <Route exact path="/" component={Home} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/tufts-magazine" component={TuftsMagazine} />
-          <Route path="/tufts-university-web-standard" component={TuftsStandard} />
-          <Route path="/boston-college-redesign" component={BostonCollege} />
+          <Route 
+            exact path="/" 
+            render={(props) => (
+              <Home 
+                {...props} 
+                setMenuState={this.setMenuState} 
+                menuState={this.state.menuState} 
+              />
+            )} 
+          />
+          <Route 
+            path="/projects"
+            render={(props) => (
+              <Projects
+                {...props} 
+              />
+            )} 
+          />
+          <Route 
+            path="/contact"
+            render={(props) => (
+              <Contact
+                {...props} 
+              />
+            )} 
+          />
+          <Route 
+            path="/tufts-magazine"
+            render={(props) => (
+              <TuftsMagazine
+                {...props} 
+              />
+            )} 
+          />
+          <Route 
+            path="/tufts-university-web-standard"
+            render={(props) => (
+              <TuftsStandard
+                {...props} 
+              />
+            )} 
+          />
+          <Route 
+            path="/boston-college-redesign"
+            render={(props) => (
+              <BostonCollege
+                {...props} 
+              />
+            )} 
+          />
       </Router>
     );
   }
