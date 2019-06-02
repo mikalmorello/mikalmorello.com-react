@@ -9,14 +9,13 @@ class Header extends React.Component {
           <div className="header__brand">
             <a className="header__logo" href="/">
               <span className="svgstore svgstore--logo">
-          
+                ~~INSERT LOGO HERE~~
               </span>
             </a>
-
           </div>
           <div className="header__actions">
             <button id="headerMenuButton" className="header__menu-button">
-
+              ~~INSERT BUTTON~~
             </button>
           </div>
         </div>

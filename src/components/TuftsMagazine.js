@@ -1,12 +1,21 @@
 import React from 'react';
+import Header from './Header'
+import Navigation from './Navigation'
+import TuftsMagazineBanner from './TuftsMagazineBanner'
+import TuftsMagazineMain from './TuftsMagazineMain'
+import Footer from './Footer'
 
 class TuftsMagazine extends React.Component {
   
   render(){
     return (
-      <main>
-        <h1>TuftsMagazinez</h1>
-      </main>
+      <>
+        <Header />
+        <Navigation />
+        <TuftsMagazineBanner />
+        <TuftsMagazineMain />
+        <Footer />
+      </>
     )
   }
   

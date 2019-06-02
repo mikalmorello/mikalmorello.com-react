@@ -1,12 +1,22 @@
 import React from 'react';
+import Header from './Header'
+import Navigation from './Navigation'
+import ProjectsBanner from './ProjectsBanner'
+import ProjectsMain from './ProjectsMain'
+import Footer from './Footer'
 
 class Projects extends React.Component {
   
   render(){
+    
     return (
-      <main>
-        <h1>Projectsz</h1>
-      </main>
+      <>
+        <Header />
+        <Navigation />
+        <ProjectsBanner />
+        <ProjectsMain />
+        <Footer />
+      </>
     )
   }
   

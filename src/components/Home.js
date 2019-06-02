@@ -1,5 +1,9 @@
 import React from 'react';
 import Header from './Header'
+import Navigation from './Navigation'
+import HomeBanner from './HomeBanner'
+import HomeMain from './HomeMain'
+import Footer from './Footer'
 
 class Home extends React.Component {
   
@@ -7,9 +11,10 @@ class Home extends React.Component {
     return (
       <>
         <Header />
-        <main>
-          <h1>Homez</h1>
-        </main>
+        <Navigation />
+        <HomeBanner />
+        <HomeMain />
+        <Footer />
       </>
     )
   }

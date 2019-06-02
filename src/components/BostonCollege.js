@@ -1,19 +1,19 @@
 import React from 'react';
 import Header from './Header'
 import Navigation from './Navigation'
-import ContactBanner from './ContactBanner'
-import ContactMain from './ContactMain'
+import BostonCollegeBanner from './BostonCollegeBanner'
+import BostonCollegeMain from './BostonCollegeMain'
 import Footer from './Footer'
 
-class Contact extends React.Component {
+class BostonCollege extends React.Component {
   
   render(){
     return (
       <>
         <Header />
         <Navigation />
-        <ContactBanner />
-        <ContactMain />
+        <BostonCollegeBanner />
+        <BostonCollegeMain />
         <Footer />
       </>
     )
@@ -21,4 +21,4 @@ class Contact extends React.Component {
   
 }
 
-export default Contact;
+export default BostonCollege;

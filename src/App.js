@@ -4,7 +4,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import TuftsMagazine from './components/TuftsMagazine'
 import TuftsStandard from './components/TuftsStandard'
-import BostonCollegeRedesign from './components/BostonCollegeRedesign'
+import BostonCollege from './components/BostonCollege'
 import { 
   BrowserRouter as Router, 
   Route,
@@ -31,7 +31,7 @@ class App extends React.Component {
           <Route path="/contact" component={Contact} />
           <Route path="/tufts-magazine" component={TuftsMagazine} />
           <Route path="/tufts-university-web-standard" component={TuftsStandard} />
-          <Route path="/boston-college-redesign" component={BostonCollegeRedesign} />
+          <Route path="/boston-college-redesign" component={BostonCollege} />
       </Router>
     );
   }

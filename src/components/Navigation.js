@@ -1,16 +1,21 @@
 import React from 'react';
-import { 
-  NavLink
-} from 'react-router-dom';
 
 class Navigation extends React.Component {
   
   render(){
     return (
-      <nav>
-        <NavLink exact activeClassName="active" to="/">Home</NavLink>
-        <NavLink activeClassName="active" to='/projects'>Projects</NavLink>
-        <NavLink activeClassName="active" to='/contact'>Contact</NavLink>
+      <nav id="mainMenu" className="main-menu"> 
+        <ul className="main-menu__links">
+          <li className="main-menu__link">
+            <a href="/">Home</a> 
+          </li>
+          <li className="main-menu__link">
+            <a href="/projects.html">Projects</a>
+          </li>
+          <li className="main-menu__link">
+            <a href="/contact.html">Contact</a>
+          </li>
+        </ul>
       </nav>
     )
   }
