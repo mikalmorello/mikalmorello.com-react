@@ -9,11 +9,14 @@ class Projects extends React.Component {
   
   render(){
     
+    document.body.classList.add('body--projects');
+    
     return (
       <>
         <Header 
           setMenuState={this.props.setMenuState}
           menuState={this.props.menuState}
+          headerStyle={this.props.headerStyle}
         />
         <Navigation 
           menuState={this.props.menuState}

@@ -9,14 +9,12 @@ class Home extends React.Component {
   
   render(){
       
-    console.log(this.props.menuState);
-
-    
     return (
       <>
         <Header 
           setMenuState={this.props.setMenuState}
           menuState={this.props.menuState}
+          headerStyle={this.props.headerStyle}
         />
         <Navigation 
           menuState={this.props.menuState}

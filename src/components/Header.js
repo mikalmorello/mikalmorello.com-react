@@ -9,12 +9,17 @@ class Header extends React.Component {
   
   checkMenuState(menuState){
     if (menuState === true) {
+      document.body.classList.add('body--menu-open');
+      document.body.classList.add('body--overflow-hidden');
       return 'header__menu-button--active';
+    } else {
+      document.body.classList.remove('body--menu-open');
+      document.body.classList.remove('body--overflow-hidden');
     }
   }
   
-  setHeaderColor(menuState){
-    if (menuState === true) {
+  setHeaderColor(menuState, headerStyle){
+    if (menuState === true || headerStyle == 'light') {
       return 'header--menu-light';
     } else {
       return '';
@@ -23,7 +28,7 @@ class Header extends React.Component {
 
   render(){
     return (
-      <header id="header" className={`header ${this.setHeaderColor(this.props.menuState)}`}>
+      <header id="header" className={`header ${this.setHeaderColor(this.props.menuState, this.props.headerStyle)}`}>
         <div className="header__container">
           <div className="header__brand">
             <Link to="/" className="header__logo">

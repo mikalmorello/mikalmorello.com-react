@@ -13,6 +13,7 @@ class Contact extends React.Component {
         <Header 
           setMenuState={this.props.setMenuState}
           menuState={this.props.menuState}
+          headerStyle={this.props.headerStyle}
         />
         <Navigation 
           menuState={this.props.menuState}

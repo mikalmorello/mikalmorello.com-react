@@ -45,6 +45,7 @@ class App extends React.Component {
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState} 
+                headerStyle="dark"
               />
             )} 
           />
@@ -54,7 +55,8 @@ class App extends React.Component {
               <Projects
                 {...props} 
                 setMenuState={this.setMenuState} 
-                menuState={this.state.menuState} 
+                menuState={this.state.menuState}
+                headerStyle="light"
               />
             )} 
           />
@@ -64,7 +66,8 @@ class App extends React.Component {
               <Contact
                 {...props} 
                 setMenuState={this.setMenuState} 
-                menuState={this.state.menuState} 
+                menuState={this.state.menuState}
+                headerStyle="dark"
               />
             )} 
           />
@@ -75,6 +78,7 @@ class App extends React.Component {
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState}  
+                headerStyle="dark"
               />
             )} 
           />
@@ -85,6 +89,7 @@ class App extends React.Component {
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState} 
+                headerStyle="dark"
               />
             )} 
           />
@@ -95,6 +100,7 @@ class App extends React.Component {
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState} 
+                headerStyle="dark"
               />
             )} 
           />
