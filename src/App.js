@@ -8,14 +8,14 @@ import BostonCollege from './components/BostonCollege'
 import { 
   BrowserRouter as Router, 
   Route,
-  NavLink
+  Link
 } from 'react-router-dom';
 
 const Links = () => (
   <nav>
-    <NavLink exact activeClassName="active" to="/">Home</NavLink>
-    <NavLink activeClassName="active" to='/projects'>Projects</NavLink>
-    <NavLink activeClassName="active" to='/contact'>Contact</NavLink>
+    <Link exact activeClassName="active" to="/">Home</Link>
+    <Link activeClassName="active" to='/projects'>Projects</Link>
+    <Link activeClassName="active" to='/contact'>Contact</Link>
   </nav>
 )
 
@@ -25,7 +25,6 @@ class App extends React.Component {
     
     return (
       <Router>
-          <Links />
           <Route exact path="/" component={Home} />
           <Route path="/projects" component={Projects} />
           <Route path="/contact" component={Contact} />

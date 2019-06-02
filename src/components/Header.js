@@ -1,6 +1,9 @@
 import React from 'react';
 import SvgLogo from './SvgLogo';
 import SvgMenu from './SvgMenu';
+import { 
+  Link
+} from 'react-router-dom';
 
 class Header extends React.Component {
   
@@ -9,11 +12,11 @@ class Header extends React.Component {
       <header id="header" className="header">
         <div className="header__container">
           <div className="header__brand">
-            <a className="header__logo" href="/">
+            <Link to="/" className="header__logo">
               <span className="svgstore svgstore--logo">
                 <SvgLogo />
               </span>
-            </a>
+            </Link>
           </div>
           <div className="header__actions">
             <button id="headerMenuButton" className="header__menu-button">

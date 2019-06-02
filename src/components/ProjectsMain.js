@@ -1,4 +1,7 @@
 import React from 'react';
+import { 
+  Link
+} from 'react-router-dom';
 
 class ProjectsMain extends React.Component {
   
@@ -9,7 +12,7 @@ class ProjectsMain extends React.Component {
           <div className="projects projects--horizontal">
             <div className="projects__container">
               <article className="project-card">
-                <a className="project-card__content" href="/tufts-magazine.html">
+                <Link to="/tufts-magazine" className="project-card__content">
                   <h2 className="project-card__title">Tufts Magazine</h2>
                   <ul className="project-card__tags">
                     <li className="project-card__tag">Development</li>
@@ -17,10 +20,10 @@ class ProjectsMain extends React.Component {
                   <div className="project-card__media">
                     <img src="/assets/images/project-tufts-magazine-card.jpg" alt="Tufts Magazine Thumbnail"/>
                   </div>
-                </a>
+                </Link>
               </article>
               <article className="project-card">
-                <a className="project-card__content" href="/tufts-university-web-standard.html">
+                <Link to="/tufts-university-web-standard" className="project-card__content">
                   <h2 className="project-card__title">Tufts Standard</h2>
                   <ul className="project-card__tags">
                     <li className="project-card__tag">Development</li>
@@ -29,10 +32,10 @@ class ProjectsMain extends React.Component {
                   <div className="project-card__media">
                     <img src="/assets/images/project-tufts-standard-card.jpg" alt="Tufts D8 Standard Thumbnail"/>
                   </div>
-                </a>
+                </Link>
               </article>
               <article className="project-card">
-                <a className="project-card__content" href="/boston-college-redesign.html">
+                <Link to="/boston-college-redesign" className="project-card__content">
                   <h2 className="project-card__title">Boston College Website Redesign</h2>
                   <ul className="project-card__tags">
                     <li className="project-card__tag">UX</li>
@@ -41,7 +44,7 @@ class ProjectsMain extends React.Component {
                   <div className="project-card__media">
                     <img src="/assets/images/project-boston-college-card.jpg" alt="Boston College Redesign Thumbnail"/>
                   </div>
-                </a>
+                </Link>
               </article>
             </div>
           </div>
@@ -71,9 +74,9 @@ class ProjectsMain extends React.Component {
           <div className="contact-card contact-card--minimal">
             <div className="contact-card__container">
               <h2 className="contact-card__titles">
-                <a href="/contact">
+                <Link to="/contact">
                   <span className="contact-card__title">Let's Connect</span> 
-                </a>
+                </Link>
               </h2>
             </div>
           </div>

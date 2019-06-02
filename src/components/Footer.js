@@ -1,5 +1,8 @@
 import React from 'react';
 import SvgLogo from './SvgLogo';
+import { 
+  Link
+} from 'react-router-dom';
 
 class Footer extends React.Component {
   
@@ -8,11 +11,11 @@ class Footer extends React.Component {
       <footer id="footer" className="footer fadein">
         <div className="footer__container">
           <div className="footer__brand">
-            <a className="footer__logo" href="/">
+            <Link to="/" className="footer__logo">
               <span className="svgstore svgstore--logo">
                 <SvgLogo />
               </span>
-            </a>
+            </Link>
           </div>
           <div className="footer__actions">
             <ul className="footer__links">

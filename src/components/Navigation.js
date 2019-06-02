@@ -1,4 +1,7 @@
 import React from 'react';
+import { 
+  Link
+} from 'react-router-dom';
 
 class Navigation extends React.Component {
   
@@ -7,13 +10,13 @@ class Navigation extends React.Component {
       <nav id="mainMenu" className="main-menu"> 
         <ul className="main-menu__links">
           <li className="main-menu__link">
-            <a href="/">Home</a> 
+            <Link to="/">Home</Link> 
           </li>
           <li className="main-menu__link">
-            <a href="/projects.html">Projects</a>
+            <Link to="/projects">Projects</Link>
           </li>
           <li className="main-menu__link">
-            <a href="/contact.html">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>

@@ -1,4 +1,7 @@
 import React from 'react';
+import { 
+  Link
+} from 'react-router-dom';
 
 class TuftsMagazineMain extends React.Component {
   
@@ -265,9 +268,9 @@ class TuftsMagazineMain extends React.Component {
           <div className="contact-card contact-card--minimal">
             <div className="contact-card__container">
               <h2 className="contact-card__titles">
-                <a href="/contact">
+                <Link to="/contact">
                   <span className="contact-card__title">Let's Connect</span> 
-                </a>
+                </Link>
               </h2>
             </div>
           </div>

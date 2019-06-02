@@ -1,5 +1,8 @@
 import React from 'react';
 import SvgCanon from './SvgCanon';
+import { 
+  Link
+} from 'react-router-dom';
 
 class HomeMain extends React.Component {
   
@@ -23,14 +26,14 @@ class HomeMain extends React.Component {
             <div className="projects__container">
               <div className="project-teaser fadein">
                 <div className="project-teaser__container">
-                  <a href="/tufts-magazine.html" className="project-teaser__content">
+                  <Link to="/tufts-magazine" className="project-teaser__content">
                    <h3 className="project-teaser__title">
                       <span className="project-teaser__white-background">Tufts Magazine</span>
                     </h3>
                     <h4 className="project-teaser__subtitle">
                       <span className="project-teaser__white-background">Reimaging an award-winning print publication and bringing it t to life on the web</span>
                     </h4>
-                  </a>
+                  </Link>
                   <div className="project-teaser__media">
                     <img src="/assets/images/project-tufts-magazine-thumbnail.png" alt="Tufts University Magazine screenshot" /> 
                   </div>
@@ -38,14 +41,14 @@ class HomeMain extends React.Component {
               </div>
               <div className="project-teaser fadein"> 
                 <div className="project-teaser__container">
-                  <a href="/tufts-university-web-standard.html" className="project-teaser__content">
+                  <Link to="/tufts-university-web-standard" className="project-teaser__content">
                    <h3 className="project-teaser__title">
                       <span className="project-teaser__white-background">Tufts Web Standard</span>
                     </h3>
                     <h4 className="project-teaser__subtitle">
                       <span className="project-teaser__white-background">Building a scalable web framework to support rapid production of university-wide Drupal 8 websites</span>
                     </h4>
-                  </a>
+                  </Link>
                   <div className="project-teaser__media">
                     <img src="/assets/images/project-tufts-standard-thumbnail.jpg" alt="Tufts D8 Standard screenshot"  /> 
                   </div> 
@@ -53,14 +56,14 @@ class HomeMain extends React.Component {
               </div>
               <div className="project-teaser fadein">
                 <div className="project-teaser__container">
-                  <a href="/boston-college-redesign.html" className="project-teaser__content">
+                  <Link to="/boston-college-redesign" className="project-teaser__content">
                    <h3 className="project-teaser__title">
                       <span className="project-teaser__white-background">Boston College Website Redesign</span>
                     </h3>
                     <h4 className="project-teaser__subtitle">
                       <span className="project-teaser__white-background">Enhancing the digital gateway to Boston College using Adobe Experience Manager</span>
                     </h4>
-                  </a>
+                  </Link>
                   <div className="project-teaser__media">
                     <img src="/assets/images/project-boston-college-thumbnail.jpg" alt="Boston College Redesign screenshot" /> 
                   </div>
@@ -73,10 +76,10 @@ class HomeMain extends React.Component {
           <div className="contact-card contact-card--full">
             <div className="contact-card__container">
               <h2 className="contact-card__titles">
-                <a href="/contact">
+                <Link to="/contact">
                   <span className="contact-card__subtitle">Located in</span>
                   <span className="contact-card__title">Watertown Ma</span>
-                </a>
+                </Link>
               </h2>
               <div className="contact-card__icon">
                 <span className="svgstore svgstore--cannon">
