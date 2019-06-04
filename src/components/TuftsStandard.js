@@ -7,12 +7,20 @@ import Footer from './Footer'
 
 class TuftsStandard extends React.Component {
   
+  checkHeaderStyle(headerStyle){
+    if(headerStyle !== 'dark'){
+      this.props.setHeaderStyle('dark');
+    }
+  }
+  
   render(){
     return (
       <>
+        {this.checkHeaderStyle(this.props.headerStyle)}
         <Header 
           setMenuState={this.props.setMenuState}
           menuState={this.props.menuState}
+          headerStyle={this.props.headerStyle}
         />
         <Navigation 
           menuState={this.props.menuState}

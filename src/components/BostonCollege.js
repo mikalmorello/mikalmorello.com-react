@@ -6,10 +6,17 @@ import BostonCollegeMain from './BostonCollegeMain'
 import Footer from './Footer'
 
 class BostonCollege extends React.Component {
+
+  checkHeaderStyle(headerStyle){
+    if(headerStyle !== 'dark'){
+      this.props.setHeaderStyle('dark');
+    }
+  }
   
   render(){
     return (
       <>
+        {this.checkHeaderStyle(this.props.headerStyle)}
         <Header 
           setMenuState={this.props.setMenuState}
           menuState={this.props.menuState}

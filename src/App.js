@@ -14,9 +14,13 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      menuState: false
+      menuState: false,
+      bannerState: 'default',
+      headerStyle: 'dark'
     }
     this.setMenuState = this.setMenuState.bind(this);
+    this.setBannerState = this.setBannerState.bind(this);
+    this.setHeaderStyle = this.setHeaderStyle.bind(this);
   } 
   
   
@@ -24,6 +28,18 @@ class App extends React.Component {
     this.setState(prevState => ({
       menuState: !prevState.menuState
     }))
+  }
+  
+  setBannerState(activeBanner){
+    this.setState({
+      bannerState: activeBanner
+    })
+  }
+  
+  setHeaderStyle(activeStyle){
+    this.setState({
+      headerStyle: activeStyle
+    })
   }
   
   render(){
@@ -36,7 +52,10 @@ class App extends React.Component {
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState} 
-                headerStyle="dark"
+                setBannerState={this.setBannerState} 
+                bannerState={this.state.bannerState} 
+                setHeaderStyle={this.setHeaderStyle} 
+                headerStyle={this.state.headerStyle} 
               />
             )} 
           />
@@ -47,7 +66,8 @@ class App extends React.Component {
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState}
-                headerStyle="light"
+                setHeaderStyle={this.setHeaderStyle} 
+                headerStyle={this.state.headerStyle} 
               />
             )} 
           />
@@ -58,7 +78,8 @@ class App extends React.Component {
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState}
-                headerStyle="dark"
+                setHeaderStyle={this.setHeaderStyle} 
+                headerStyle={this.state.headerStyle} 
               />
             )} 
           />
@@ -69,7 +90,8 @@ class App extends React.Component {
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState}  
-                headerStyle="dark"
+                setHeaderStyle={this.setHeaderStyle} 
+                headerStyle={this.state.headerStyle} 
               />
             )} 
           />
@@ -80,7 +102,8 @@ class App extends React.Component {
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState} 
-                headerStyle="dark"
+                setHeaderStyle={this.setHeaderStyle} 
+                headerStyle={this.state.headerStyle} 
               />
             )} 
           />
@@ -91,7 +114,8 @@ class App extends React.Component {
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState} 
-                headerStyle="dark"
+                setHeaderStyle={this.setHeaderStyle} 
+                headerStyle={this.state.headerStyle} 
               />
             )} 
           />

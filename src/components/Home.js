@@ -21,7 +21,12 @@ class Home extends React.Component {
         <Navigation 
           menuState={this.props.menuState}
         />
-        <HomeBanner />
+        <HomeBanner 
+          setBannerState={this.props.setBannerState}
+          bannerState={this.props.bannerState}
+          setHeaderStyle={this.props.setHeaderStyle} 
+          headerStyle={this.props.headerStyle}
+        />
         <HomeMain />
         <Footer />
       </>
