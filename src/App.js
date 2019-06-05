@@ -5,6 +5,7 @@ import Contact from './components/Contact'
 import TuftsMagazine from './components/TuftsMagazine'
 import TuftsStandard from './components/TuftsStandard'
 import BostonCollege from './components/BostonCollege'
+import ScrollToTop from './components/ScrollToTop'
 import { 
   BrowserRouter as Router, 
   Route
@@ -42,9 +43,12 @@ class App extends React.Component {
     })
   }
   
+  
+  
   render(){
     return (
-      <Router>
+      <Router> 
+        <ScrollToTop>
           <Route 
             exact path="/" 
             render={(props) => (
@@ -119,6 +123,7 @@ class App extends React.Component {
               />
             )} 
           />
+        </ScrollToTop>
       </Router>
     );
   }
