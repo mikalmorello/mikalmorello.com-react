@@ -1,4 +1,5 @@
 import React from 'react';
+import Map from './Map'
 
 class ContactMain extends React.Component {
   
@@ -30,7 +31,20 @@ class ContactMain extends React.Component {
           </div>
         </section>
         <section className="map fadein">
-          <div id="map"></div>
+        <Map
+                id="map"
+                options={{
+                  center: { lat: 41.0082, lng: 28.9784 },
+                  zoom: 8
+                }}
+                onMapLoad={map => {
+                  var marker = new window.google.maps.Marker({
+                    position: { lat: 41.0082, lng: 28.9784 },
+                    map: map,
+                    title: 'Hello Istanbul!'
+                  });
+                }}
+              />
         </section>
       </main>
     )
