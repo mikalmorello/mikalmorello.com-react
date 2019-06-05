@@ -27,6 +27,7 @@ class Projects extends React.Component {
         />
         <Navigation 
           menuState={this.props.menuState}
+          closeMenu={this.props.closeMenu}
         />
         <ProjectsBanner />
         <ProjectsMain />

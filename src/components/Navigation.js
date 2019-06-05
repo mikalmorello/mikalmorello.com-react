@@ -6,9 +6,11 @@ import {
 class Navigation extends React.Component {
   
   checkMenuState(menuState){
-    if (menuState === true) {
+    if (menuState === 'default') {
+      return '';
+    } else if(menuState === 'true'){ 
       return 'main-menu--is-visible';
-    } else {
+    } else if (menuState === 'false') {
       return 'main-menu--is-hidden';
     }
   }
@@ -18,13 +20,13 @@ class Navigation extends React.Component {
       <nav id="mainMenu" className={`main-menu ${this.checkMenuState(this.props.menuState)}`}> 
         <ul className="main-menu__links">
           <li className="main-menu__link">
-            <Link to="/">Home</Link> 
+            <Link to="/" onClick={(e)=>this.props.closeMenu()}>Home</Link> 
           </li>
           <li className="main-menu__link">
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects" onClick={(e)=>this.props.closeMenu()}>Projects</Link>
           </li>
           <li className="main-menu__link">
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={(e)=>this.props.closeMenu()}>Contact</Link>
           </li>
         </ul>
       </nav>

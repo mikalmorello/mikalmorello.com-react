@@ -8,7 +8,7 @@ import {
 class Header extends React.Component {
   
   checkMenuState(menuState){
-    if (menuState === true) {
+    if (menuState === 'true') {
       document.body.classList.add('body--menu-open');
       document.body.classList.add('body--overflow-hidden');
       return 'header__menu-button--active';
@@ -19,7 +19,7 @@ class Header extends React.Component {
   }
   
   setHeaderColor(menuState, headerStyle){
-    if (menuState === true || headerStyle === 'light') {
+    if (menuState === 'true' || headerStyle === 'light') {
       return 'header--menu-light';
     } else {
       return '';

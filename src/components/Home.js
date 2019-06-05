@@ -20,6 +20,7 @@ class Home extends React.Component {
         />
         <Navigation 
           menuState={this.props.menuState}
+          closeMenu={this.props.closeMenu}
         />
         <HomeBanner 
           setBannerState={this.props.setBannerState}
