@@ -34,14 +34,14 @@ class ContactMain extends React.Component {
         <Map
                 id="map"
                 options={{
-                  center: { lat: 41.0082, lng: 28.9784 },
-                  zoom: 8
+                  center: { lat: 42.361340, lng: -71.164772 },
+                  zoom: 14
                 }}
                 onMapLoad={map => {
                   var marker = new window.google.maps.Marker({
-                    position: { lat: 41.0082, lng: 28.9784 },
+                    position: { lat: 42.361340, lng: -71.164772 },
                     map: map,
-                    title: 'Hello Istanbul!'
+                    title: 'Arsenal'
                   });
                 }}
               />
