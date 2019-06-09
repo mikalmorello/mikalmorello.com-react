@@ -3,9 +3,16 @@ import {
   Link
 } from 'react-router-dom';
 import HorizontalScroll from './HorizontalScroll';
+import InteractivePrototype from './InteractivePrototype' 
 import Fade from 'react-reveal/Fade';
 
 class BostonCollegeMain extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imageUrl: '/assets/images/cd-app-image.png'
+    };
+  }
   
   render(){
     return (
@@ -116,25 +123,13 @@ class BostonCollegeMain extends React.Component {
         </Fade>
         <Fade>
           <section className="section section--mockup project__section">
-            <div className="mockup">
-              <div id="mockupContainer"  className="mockup__container">
-                <div className="mockup__intro">
-                  <h2 className="mockup__title">Visualizing the design</h2>
-                  <div className="mockup__description">
-                    <p>As a campus wide initiative, it was important the the redesign process was truly inclusive.  In order to get buy in from stakeholders throughout the project, we developed increasingly interactive prototypes to allow users to visualize and vet proposed designs and functionality prior to their release.</p>
-                  </div>
-                  <div className="mockup__button-container">
-                    <button id="mockupButton" className="mockup__button">View Prototype</button>
-                  </div>
-                </div>
-                <div id="infoOverlay" className="mockup__image">
-                  <img src="/assets/images/cd-app-image.png" alt="High fidelity prototype" /> 
-                  <div className="mockup__image-right"></div>
-                  <div className="mockup__image-left"></div>
-                </div> 
-                <button href="#0" id="mockupCloseButton" className="mockup__close-button mockup__hide-text">Close Prototype</button>
-              </div>
-            </div>
+            <InteractivePrototype 
+              mockupTitle="Visualizing the design"
+              mockupDescription={              
+                <p>As a campus wide initiative, it was important the the redesign process was truly inclusive.  In order to get buy in from stakeholders throughout the project, we developed increasingly interactive prototypes to allow users to visualize and vet proposed designs and functionality prior to their release.</p>
+              }
+              mockupImage={this.state.imageUrl}
+            />
           </section>
         </Fade>
         <Fade>
