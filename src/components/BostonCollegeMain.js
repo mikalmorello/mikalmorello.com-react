@@ -2,6 +2,7 @@ import React from 'react';
 import { 
   Link
 } from 'react-router-dom';
+import HorizontalScroll from './HorizontalScroll';
 import Fade from 'react-reveal/Fade';
 
 class BostonCollegeMain extends React.Component {
@@ -37,9 +38,9 @@ class BostonCollegeMain extends React.Component {
           </section>
         </Fade>
         <Fade>
-          <section className="section section--horizontal-scroll project__section">
-            <div className="horizontal-scroll horizontal-scroll--left">
-              <div className="horizontal-scroll__items">
+          <HorizontalScroll 
+            scrollItems={
+              <>
                 <div className="horizontal-scroll__item horizontal-scroll__item--1">
                   <div className="horizontal-scroll__item-container">
                     <h2 className="horizontal-scroll__title">
@@ -68,9 +69,9 @@ class BostonCollegeMain extends React.Component {
                     <div className="horizontal-scroll__item-label">Stage 3</div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
+              </>
+            } 
+          />
         </Fade>
         <Fade>
           <section className="section section--text-block section--jesuit-bg  project__section">

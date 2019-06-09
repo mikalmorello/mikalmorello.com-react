@@ -129,7 +129,52 @@ class TuftsMagazineMain extends React.Component {
           </section>
         </Fade>
         <Fade>
-          <HorizontalScroll />
+          <HorizontalScroll 
+            scrollItems={
+              <>
+                <div className="horizontal-scroll__item horizontal-scroll__item--1">
+                  <div className="horizontal-scroll__item-container">
+                    <h2 className="horizontal-scroll__title">
+                      Digitally Crafted
+                    </h2>
+                    <div className="horizontal-scroll__description">
+                      Visually distinct layouts and designs, carefully crafted for both online and print publications.
+                    </div>
+                  </div>
+                </div>
+                <div className="horizontal-scroll__item horizontal-scroll__item--2">
+                  <div className="horizontal-scroll__item-container">
+                    <img className="horizontal-scroll__item-media" src="/assets/images/tufts-magazine-maestro-print.png" alt="" />
+                  </div>
+                </div>
+                <div className="horizontal-scroll__item horizontal-scroll__item--3">
+                  <div className="horizontal-scroll__item-container">
+                    <img className="horizontal-scroll__item-media" src="/assets/images/tufts-magazine-maestro-macbook.png" alt="" />
+                  </div>
+                </div>
+                <div className="horizontal-scroll__item horizontal-scroll__item--4">
+                  <div className="horizontal-scroll__item-container">
+                    <img className="horizontal-scroll__item-media" src="/assets/images/tufts-magazine-john-brown-print.png" alt="" />
+                  </div>
+                </div>
+                <div className="horizontal-scroll__item horizontal-scroll__item--5">
+                  <div className="horizontal-scroll__item-container">
+                    <img className="horizontal-scroll__item-media" src="/assets/images/tufts-magazine-john-brown-macbook.png" alt="" />
+                  </div>
+                </div>
+                <div className="horizontal-scroll__item horizontal-scroll__item--4">
+                  <div className="horizontal-scroll__item-container">
+                    <img className="horizontal-scroll__item-media" src="/assets/images/tufts-magazine-help-print.png" alt="" />
+                  </div>
+                </div>
+                <div className="horizontal-scroll__item horizontal-scroll__item--5">
+                  <div className="horizontal-scroll__item-container">
+                    <img className="horizontal-scroll__item-media" src="/assets/images/tufts-magazine-help-macbook.png" alt="" />
+                  </div>
+                </div>
+              </>
+            }
+          />
         </Fade>
         <Fade>
           <section className="section section--text-block project__section">
