@@ -61,7 +61,6 @@ class Header extends React.Component {
   }
   
   createCompany(){
-    console.log('name is ' + this.state.company); 
     if(!(this.state.company === '')){
       return (
           <div className="header__company">
