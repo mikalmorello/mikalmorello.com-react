@@ -9,16 +9,67 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      y: 0
-    };
+      company: '',
+      companyImage: ''
+    }
+    this.hasHash = this.hasHash.bind(this);
   }
   
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll, { passive: true })
+    this.hasHash();
+    window.addEventListener('scroll', this.handleScroll, { passive: true });
+    window.addEventListener('hashchange', this.hasHash, false);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('hashchange', this.hasHash, false);
+  }
+  
+  
+  hasHash(){
+    switch(window.location.hash.substring(1)) {
+      case 'harvard': 
+        this.setCompany(window.location.hash.substring(1));
+        break;
+      case 'mit':
+        this.setCompany(window.location.hash.substring(1));
+        break;
+      case 'edx':
+        this.setCompany(window.location.hash.substring(1));
+        break;
+      case 'hbsp':
+        this.setCompany(window.location.hash.substring(1));
+        break;
+      case 'wgbh':
+        this.setCompany(window.location.hash.substring(1));
+        break;
+      case 'massart':
+        this.setCompany(window.location.hash.substring(1));
+        break;
+      default:
+        this.setCompany('');
+        break;
+    }
+  }
+  
+  setCompany(companyName){
+    this.setState({
+      company: companyName,
+      companyImage: `/assets/images/company/${companyName}.svg`
+    })
+  }
+  
+  createCompany(){
+    console.log('name is ' + this.state.company); 
+    if(!(this.state.company === '')){
+      return (
+          <div className="header__company">
+            <span className="header__company-sign">+ </span>
+            <img className="header__company-logo" src={this.state.companyImage} alt={this.state.company} />
+          </div>
+      )
+    }
   }
 
   handleScroll(event) {
@@ -73,6 +124,9 @@ class Header extends React.Component {
                 <SvgLogo />
               </span>
             </Link>
+
+            {this.createCompany()}
+
           </div>
           <div className="header__actions">
             <button id="headerMenuButton" className={`header__menu-button ${this.checkMenuState(this.props.menuState)}`} onClick={(e)=>this.props.setMenuState()}>

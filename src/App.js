@@ -24,7 +24,6 @@ class App extends React.Component {
     this.setHeaderStyle = this.setHeaderStyle.bind(this);
   } 
   
-  
   setMenuState(){
     console.log(this.state.menuState);
     if(this.state.menuState === 'default'){
@@ -40,7 +39,6 @@ class App extends React.Component {
         menuState: 'true'
       })
     } 
-
   }
   
   closeMenu () {
@@ -62,8 +60,9 @@ class App extends React.Component {
   }
   
   
-  
   render(){
+      //console.log(this.props.location.search);
+      //console.log(this.state.location.hash);
     return (
       <Router> 
           <ScrollIntoView>

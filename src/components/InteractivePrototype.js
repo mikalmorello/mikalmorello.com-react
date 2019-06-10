@@ -1,7 +1,7 @@
 import React from 'react';
 
 class InteractivePrototype extends React.Component {
-constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       isActive: false
