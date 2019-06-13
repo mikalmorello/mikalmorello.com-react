@@ -1,9 +1,9 @@
 import React from 'react';
-import SvgLogo from './SvgLogo';
 import Fade from 'react-reveal/Fade';
 import { 
   Link
 } from 'react-router-dom';
+import { ReactComponent as Logo } from './logo.svg';
 
 class Footer extends React.Component {
   
@@ -15,7 +15,7 @@ class Footer extends React.Component {
             <div className="footer__brand">
               <Link to="/" className="footer__logo">
                 <span className="svgstore svgstore--logo">
-                  <SvgLogo />
+                  <Logo />
                 </span>
               </Link>
             </div>

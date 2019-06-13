@@ -1,9 +1,10 @@
 import React from 'react';
-import SvgLogo from './SvgLogo';
+
 import SvgMenu from './SvgMenu';
 import { 
   Link
 } from 'react-router-dom';
+import { ReactComponent as Logo } from './logo.svg';
 
 class Header extends React.Component {
   constructor(props) {
@@ -120,7 +121,7 @@ class Header extends React.Component {
           <div className="header__brand">
             <Link to="/" className="header__logo">
               <span className="svgstore svgstore--logo">
-                <SvgLogo />
+                <Logo />
               </span>
             </Link>
 
