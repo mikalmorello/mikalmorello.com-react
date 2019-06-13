@@ -104,10 +104,13 @@ class Header extends React.Component {
   }
   
   setHeaderColor(menuState, headerStyle){
+    var header = document.getElementById('header');
     if (menuState === 'true' || headerStyle === 'light') {
-      return 'header--menu-light';
+      header.classList.add('header--menu-light');
+      //return 'header--menu-light';
     } else {
-      return '';
+      //return '';
+      
     }
   }
 
