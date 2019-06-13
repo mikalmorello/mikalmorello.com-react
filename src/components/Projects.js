@@ -6,12 +6,7 @@ import ProjectsMain from './ProjectsMain'
 import Footer from './Footer'
 
 class Projects extends React.Component {
-  
-  checkHeaderStyle(headerStyle){
-    if(headerStyle !== 'light'){
-      this.props.setHeaderStyle('light');
-    }
-  }
+
   
   render(){
     
@@ -19,7 +14,6 @@ class Projects extends React.Component {
     
     return (
       <>
-        {this.checkHeaderStyle(this.props.headerStyle)}
         <Header 
           setMenuState={this.props.setMenuState}
           menuState={this.props.menuState}

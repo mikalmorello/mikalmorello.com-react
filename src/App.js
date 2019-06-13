@@ -22,10 +22,10 @@ class App extends React.Component {
     this.setMenuState = this.setMenuState.bind(this);
     this.setBannerState = this.setBannerState.bind(this);
     this.setHeaderStyle = this.setHeaderStyle.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   } 
   
   setMenuState(){
-    console.log(this.state.menuState);
     if(this.state.menuState === 'default'){
       this.setState({
         menuState: 'true'
@@ -63,6 +63,7 @@ class App extends React.Component {
   render(){
       //console.log(this.props.location.search);
       //console.log(this.state.location.hash);
+      //console.log(this.state.headerStyle);
     return (
       <Router> 
           <ScrollIntoView>
@@ -89,8 +90,8 @@ class App extends React.Component {
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState}
                 setHeaderStyle={this.setHeaderStyle} 
-                headerStyle={this.state.headerStyle}
-                closeMenu={this.closeMenu} 
+                headerStyle='light'
+                closeMenu={this.closeMenu.bind(this)} 
               />
             )} 
           />
@@ -102,7 +103,7 @@ class App extends React.Component {
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState}
                 setHeaderStyle={this.setHeaderStyle} 
-                headerStyle={this.state.headerStyle} 
+                headerStyle='dark'
                 closeMenu={this.closeMenu}
               />
             )} 
@@ -115,7 +116,7 @@ class App extends React.Component {
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState}  
                 setHeaderStyle={this.setHeaderStyle} 
-                headerStyle={this.state.headerStyle} 
+                headerStyle='dark'
                 closeMenu={this.closeMenu}
               />
             )} 
@@ -128,7 +129,7 @@ class App extends React.Component {
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState} 
                 setHeaderStyle={this.setHeaderStyle} 
-                headerStyle={this.state.headerStyle} 
+                headerStyle='dark'
                 closeMenu={this.closeMenu}
               />
             )} 
@@ -141,7 +142,7 @@ class App extends React.Component {
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState} 
                 setHeaderStyle={this.setHeaderStyle} 
-                headerStyle={this.state.headerStyle} 
+                headerStyle='dark'
                 closeMenu={this.closeMenu}
               />
             )} 

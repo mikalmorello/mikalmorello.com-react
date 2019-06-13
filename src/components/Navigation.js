@@ -1,9 +1,16 @@
 import React from 'react';
 import { 
-  Link
+  Link,
+  withRouter
 } from 'react-router-dom';
 
 class Navigation extends React.Component {
+  
+  componentWillMount() {
+    this.props.history.listen(() => {
+      this.props.closeMenu();
+    });
+  }
   
   checkMenuState(menuState){
     if (menuState === 'default') {
@@ -20,13 +27,13 @@ class Navigation extends React.Component {
       <nav id="mainMenu" className={`main-menu ${this.checkMenuState(this.props.menuState)}`}> 
         <ul className="main-menu__links">
           <li className="main-menu__link">
-            <Link to="/" onClick={(e)=>this.props.closeMenu()}>Home</Link> 
+            <Link to="/" >Home</Link> 
           </li>
           <li className="main-menu__link">
-            <Link to="/projects" onClick={(e)=>this.props.closeMenu()}>Projects</Link>
+            <Link to="/projects">Projects</Link>
           </li>
           <li className="main-menu__link">
-            <Link to="/contact" onClick={(e)=>this.props.closeMenu()}>Contact</Link>
+            <Link to="/contact" >Contact</Link>
           </li>
         </ul>
       </nav>
@@ -35,4 +42,4 @@ class Navigation extends React.Component {
   
 }
 
-export default Navigation;
+export default withRouter(Navigation);

@@ -2,40 +2,39 @@ import React from 'react';
 
 class HomeBanner extends React.Component {
   
-  setBannerSubtitle(bannerState, headerStyle){
+  setBannerTheme(bannerState, headerStyle){
+    this.props.setBannerState(bannerState);
     if(bannerState === 'designer'){
-      if(headerStyle !== 'light'){
-        this.props.setHeaderStyle('light');
-      }
+      this.props.setHeaderStyle('light');
+    } else if(bannerState === 'developer') {
+      this.props.setHeaderStyle('dark');
+    } else if (bannerState === 'strategist') {
+      this.props.setHeaderStyle('light');
+    }
+  }
+  
+  setBannerSubtitle(bannerState){
+    if(bannerState === 'designer'){
       return (
         <h2 id="subtitleDesigner" className="banner__subtitle banner__subtitle--designer banner__subtitle--active">
           As a designer from the outset, I look to my arts background to ensure my work is unique and engaging and leaves its mark on the digital universe.
         </h2>
       )
     } else if(bannerState === 'developer') {
-      if(headerStyle !== 'dark'){
-        this.props.setHeaderStyle('dark');
-      }
       return (
         <h2 id="subtitleDeveloper" className="banner__subtitle banner__subtitle--developer banner__subtitle--active">
           As a developer, I thrive on getting lost in my editor, crafting clean, organized, and accessible code.
         </h2>
       )
     } else if (bannerState === 'strategist') {
-      if(headerStyle !== 'light'){
-        this.props.setHeaderStyle('light');
-      }
       return (
         <h2 id="subtitleStrategist" className="banner__subtitle banner__subtitle--strategist banner__subtitle--active">
           A strategist at heart, with the constant need to innovate, I enjoy the challenges and opportunities every new project brings.
         </h2>
       )
-    } else if (bannerState === 'default') {
-      if(headerStyle !== 'dark'){
-        this.props.setHeaderStyle('dark');
-      }
-    }
+    } 
   }
+
   
   render(){
     return (
@@ -48,10 +47,10 @@ class HomeBanner extends React.Component {
                   Hi, my name is Mikal Morello,  I am a:
                 </span>
                 <span className="banner__title-large">
-                  <button className="banner__button banner__button--designer" onClick={(e)=>this.props.setBannerState('designer')}>Designer</button>, <button className="banner__button banner__button--developer" onClick={(e)=>this.props.setBannerState('developer')}>developer</button>, and <button className="banner__button banner__button--strategist" onClick={(e)=>this.props.setBannerState('strategist')}>digital strategist</button>.
+                  <button className="banner__button banner__button--designer" onClick={(e)=>this.setBannerTheme('designer', 'light')}>Designer</button>, <button className="banner__button banner__button--developer" onClick={(e)=>this.setBannerTheme('developer', 'dark')}>developer</button>, and <button className="banner__button banner__button--strategist" onClick={(e)=>this.setBannerTheme('strategist', 'light')}>digital strategist</button>.
                 </span>
               </h1>
-              {this.setBannerSubtitle(this.props.bannerState, this.props.headerStyle )}
+              {this.setBannerSubtitle(this.props.bannerState)}
             </div>
             <div className="banner__link">
               <a href="#main" className="scroll">Learn More</a>
