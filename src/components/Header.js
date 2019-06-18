@@ -100,23 +100,24 @@ class Header extends React.Component {
       document.body.classList.add('body--overflow-hidden');
       header.classList.add('header--menu-open');
       return 'header__menu-button--active';
-    } else if (menuState === 'false') {
+    } else if (menuState === 'false' || menuState==='default') {
       document.body.classList.remove('body--menu-open');
       document.body.classList.remove('body--overflow-hidden');
-      if(header.classList.contains('header--menu-open')){
+      if(header && header.classList.contains('header--menu-open')){
         header.classList.remove('header--menu-open');
       }
     }
   }
   
   setHeaderColor(menuState, headerStyle){
-    var header = document.getElementById('header');
-    if (menuState === 'true' || headerStyle === 'light') {
-      //header.classList.add('header--menu-light');
-      return 'header--menu-light';
-    } else {
-      //return '';
-      
+    if(document.getElementById('header')){
+      var header = document.getElementById('header');
+      if (header && (menuState === 'true' || headerStyle === 'light')) {
+        header.classList.add('header--menu-light');
+        // return 'header--menu-light';
+      } else if (header){
+        header.classList.remove('header--menu-light');
+      }
     }
   }
 
@@ -124,8 +125,9 @@ class Header extends React.Component {
     return (
       <header
         id="header" 
-        className={`header ${this.setHeaderColor(this.props.menuState, this.props.headerStyle)}`}
+        className='header'
       >
+        {this.setHeaderColor(this.props.menuState, this.props.headerStyle)}
         <div className="header__container">
           <div className="header__brand">
             <Link to="/" className="header__logo">
