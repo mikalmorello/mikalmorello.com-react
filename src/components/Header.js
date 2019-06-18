@@ -86,28 +86,34 @@ class Header extends React.Component {
     }
 
     if (scrollAmount > headerOffset) {
-      header.classList.add("header--sticky");
+      header.classList.add('header--sticky');
     } else {
-      header.classList.remove("header--sticky");
+      header.classList.remove('header--sticky');
     }
   }
   
   checkMenuState(menuState){
+    var header = document.getElementById('header');
+    console.log(header);
     if (menuState === 'true') {
       document.body.classList.add('body--menu-open');
       document.body.classList.add('body--overflow-hidden');
+      header.classList.add('header--menu-open');
       return 'header__menu-button--active';
-    } else {
+    } else if (menuState === 'false') {
       document.body.classList.remove('body--menu-open');
       document.body.classList.remove('body--overflow-hidden');
+      if(header.classList.contains('header--menu-open')){
+        header.classList.remove('header--menu-open');
+      }
     }
   }
   
   setHeaderColor(menuState, headerStyle){
     var header = document.getElementById('header');
     if (menuState === 'true' || headerStyle === 'light') {
-      header.classList.add('header--menu-light');
-      //return 'header--menu-light';
+      //header.classList.add('header--menu-light');
+      return 'header--menu-light';
     } else {
       //return '';
       
