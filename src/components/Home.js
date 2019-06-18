@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Header from './Header'
 import Navigation from './Navigation'
 import HomeBanner from './HomeBanner'
@@ -13,6 +14,10 @@ class Home extends React.Component {
     
     return (
       <>
+        <Helmet>
+          <title>Mikal Morello, designer, developer, and digital strategist</title>
+          <meta name="description" content="Hi, my name is Mikal Morello, I am a Designer, developer, and digital strategist. I am currently working as a front-end web developer for Tufts University" />
+        </Helmet>  
         <Header 
           setMenuState={this.props.setMenuState}
           menuState={this.props.menuState}
